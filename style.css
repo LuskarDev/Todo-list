@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font: 'Roboto', sans-serif;
+    --red-dark: #800B13;
+    --red-light: #CC121F;
+}
+
+body {
+    height: 100vh;
+    background-color: #166d3b;
+    background-image: linear-gradient(147deg, #166d3b 0%, #000000 74%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .box {
+    position: relative;
+    width: 600px;
+    height: 550px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font);
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+    padding: 20px 40px;
+    border-radius: 4px;
+    margin: 30px 0;
+    border: 1px solid white;
+}
+
+section .box .box-title {
+    position: absolute;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+section .box h1{
+    color: white;
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin: 10px 0;
+}
+
+section .box .input-text{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 4px;
+}
+
+
+section .box .input-text:hover {
+    box-shadow: 0px 4px 10px 0px black;
+}
+
+section .box .input-text > i{
+    margin-right: 10px;
+    font-size: 1.4rem;
+}
+
+section .box .input-text span i{
+    cursor: pointer;
+}
+
+section .box .input-text span i:hover{
+    background-color: var(--red-light);
+    padding: 10px;
+    color: white;
+    border-radius: 4px;
+    transition: all .35s ease;
+}
+
+section .box .input-text input{
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+section .filters {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: var(--font);
+    font-weight: 700;
+}
+
+section .filters span {
+    margin: 0 10px;
+    padding-left: 10px;
+    border-left: 1px solid white;
+    cursor: pointer;
+}
+
+section .filters span.active{
+    color: black;
+    padding: 5px;
+    background-color: white;
+    border-radius: 8px;
+    transition: all .25s ease;
+}
+
+section .filters button{
+    background-color: rgb(0, 81, 255);
+    padding: 10px;
+    border-radius: 4px;
+    font-family: var(--font);
+    color: white;
+    font-weight: 700;
+    border:none;
+}
+
+section .box .lista {
+    position: absolute;
+    bottom: 20px;
+    width: 580px;
+    height: 350px;
+    padding: 0 2rem;
+    overflow-x: hidden;
+}
+
+section .box .lista::-webkit-scrollbar-thumb{
+    border-right: 1px solid crimson;
+}
+
+section .box .lista::-webkit-scrollbar{
+    background-color: transparent;
+}
+
+section .box .lista ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+section .box .lista ul li{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    height: 80px;
+    margin: 30px 0;
+    background-color: white;
+    padding: 15px;
+    font-family: var(--font);
+    border-radius: 4px;
+    font-weight: 400;
+}
+
+section .box .lista ul > span{
+    font-family: var(--font);
+    font-weight: 700;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+section .box .lista ul li .settings{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -25px;
+    right: -15px;
+}
+
+section .box .lista ul li .settings > i{
+    background-color: black;
+    border-radius: 50%;
+    padding: 10px 18px;
+    color: white;
+    cursor: pointer;
+}
+
+section .box .lista ul li .settings > i:hover{
+    background-color: black;
+    transition: all .25s ease;
+}
+
+section .box .lista ul li .settings .options {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    background-color: black;
+    padding: 10px;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 28px;
+    border-bottom-left-radius: 28px;
+    color: white;
+    transform: scale(0);
+}
+
+
+section .box .lista ul li .settings.show .options{
+    opacity: 1;
+    visibility: visible;
+    transform:  scale(1);
+    transition: transform .25s ease;
+}
+
+section .box .lista ul li .settings .options span {
+    display: flex;
+    margin: 5px;
+    cursor: pointer;
+}
+
+section .box .lista ul li .settings .options span:nth-child(1):hover{
+    background-color:rgb(0, 81, 255) ;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+section .box .lista ul li .settings .options span:nth-child(2):hover{
+    background-color: var(--red-light);
+
+    padding: 4px;
+    border-radius: 8px;
+}
+
+section .box .lista ul li label{
+    display: flex;
+    align-items: center;
+}
+
+section .box .lista ul li label > p{
+    font-family: var(--font);
+    font-weight: 500;
+}
+
+section .box .lista ul li label p.checked{
+    text-decoration: line-through;
+}
+
+section .box .lista ul li label input{
+    margin-right: 10px;
+}
