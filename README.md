@@ -8,7 +8,7 @@
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 <p align="center">
-   <img alt="Todo-list" title="Todo list" src="https://github.com/LuskarDev/RocketCoffee/blob/main/assets/rocketcoffe.png" width="720px" />
+   <img alt="Todo-list" title="Todo list" src="https://github.com/LuskarDev/Todo-list/blob/main/todo-list.png" width="720px" />
 </p>
 
 ## 🚀 Tecnologias
